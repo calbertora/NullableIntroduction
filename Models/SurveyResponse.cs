@@ -60,5 +60,8 @@ namespace NullableIntroduction.Models
                     return "Red. No, Green. Wait.. Blue... AAARGGGGGHHH!";
             }
         }
+        public bool AnsweredSurvey => surveyResponses != null;
+        public string Answer(int index) => surveyResponses?.GetValueOrDefault(index) ?? "No answer";
+
     }    
 }
